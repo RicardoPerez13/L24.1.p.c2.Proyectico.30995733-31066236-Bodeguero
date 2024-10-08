@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bodeguero</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section id="mainForm">
+      <h3>Bodeguero</h3>
+      
+      <h4>Cantidad de Billetes de 10$, 20$ y 50$ al Iniciar</h5>
+      <input type="text" id="mainForm_inicialDiez" placeholder="10$"></input>
+      <input type="text" id="mainForm_inicialVeinte" placeholder="20$"></input>
+      <input type="text" id="mainForm_inicialCincuenta" placeholder="50$"></input>
+      <button id="mainForm_btAceptar">Aceptar</button>
+      
+      <table id="mainForm_tabla">
+        <tr>
+          <th>Cedula</th>
+          <th>Denominación</th>
+          <th>Cantidad</th>
+          <th>Monto Cuenta</th>
+        </tr>
+      </table>
+      <h5>Monto al final de billetes de 10$: <span id="mainForm_lblMontoDiez">?</span>$</h5>
+      <h5>Monto al final de billetes de 20$: <span id="mainForm_lblMontoVeinte">?</span>$</h5>
+      <h5>Monto al final de billetes de 50$: <span id="mainForm_lblMontoCincuenta">?</span>$</h5>
+      <h5>Al bodeguero le queda un monto total de: <span id="mainForm_lblMontoTotal">?</span>$</h5>
+      <button id="mainForm_btAgregar">Agregar cliente</button>
+    </section>
+
+    <section id="clienteForm">
+      <h3>Datos del cliente</h3>
+      <input type="text" id="clienteForm_inCedula" placeholder="Cedula"></input>
+      <input type="text" id="clienteForm_inDenominacion" placeholder="Denominación"></input>
+      <input type="text" id="clienteForm_inCantidad"  placeholder="Cantidad"></input>
+      <button id="clienteForm_btAceptar">Aceptar</button> 
+    </section>
+  </body>
+  <script type="module">
+    import Cl_controlador from "./js/Cl_controlador.js";
+    new Cl_controlador()
+ </script>
+</html>
