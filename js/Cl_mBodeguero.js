@@ -6,6 +6,10 @@ export default class Cl_mBodeguero {
         this.inicialDiez = inicialDiez;
         this.inicialVeinte = inicialVeinte;
         this.inicialCincuenta = inicialCincuenta;
+        
+        this._inicialDiez=0;
+        this._inicialVeinte=0;
+        this._inicialCincuenta=0
         }
         
     set inicialDiez(inicialDiez) {
@@ -49,11 +53,8 @@ export default class Cl_mBodeguero {
         }
     montoTotal (){
             return this.montoDiez() + this.montoVeinte() + this.montoCincuenta();
-        };
-    
-
-    }
-    
+        }; 
+}
     
 
 
