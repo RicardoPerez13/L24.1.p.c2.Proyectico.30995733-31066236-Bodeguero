@@ -41,19 +41,44 @@ export default class Cl_mBodeguero {
         else if (cliente.denominacion === 50){
             this.acumCincuenta += cliente.cantidad;
         }
+        else return 0;
     }
+
+    cantidadCincuenta (){
+            return (this.acumCincuenta + this.inicialCincuenta);
+    }
+    cantidadVeinte (){
+            return (this.acumVeinte + this.inicialVeinte);
+    }
+    cantidadDiez (){
+            return (this.acumDiez + this.inicialDiez);
+    }
+
+
     montoDiez (){
-            return (this.acumDiez + this.inicialDiez )* 10;
+            return this.cantidadDiez() * 10;
         }
     montoVeinte(){
-            return (this.acumVeinte + this.inicialVeinte) * 20;
+            return this.cantidadVeinte() * 20;
         }
     montoCincuenta (){
-            return (this.acumCincuenta + this.inicialCincuenta) * 50;
+            return  this.cantidadCincuenta() * 50;
         }
     montoTotal (){
             return this.montoDiez() + this.montoVeinte() + this.montoCincuenta();
         }; 
+
+        
+
+    montoJornada (){
+            return (this.acumDiez) * 10 + (this.acumVeinte) * 20 + (this.acumCincuenta) * 50;
+        }
+    
+
+    porcentajeCantidadCincuenta (){
+            return (this.cantidadCincuenta()-this.inicialCincuenta) / this.cantidadCincuenta() * 100;
+    } 
+  
 }
     
 
