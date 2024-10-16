@@ -11,37 +11,37 @@
     <section id="mainForm">
       <h3>Bodeguero</h3>
       
-      <h4>Cantidad de Billetes de 10$, 20$ y 50$ al Iniciar</h5>
-      <input type="text" id="mainForm_inicialDiez" placeholder="10$"></input>
-      <input type="text" id="mainForm_inicialVeinte" placeholder="20$"></input>
-      <input type="text" id="mainForm_inicialCincuenta" placeholder="50$"></input>
+      <h4>Cantidad de Billetes de 10$, 20$ y 50$ al Inicio de la Jornada</h5>
+      <input type="text" id="mainForm_inicialDiez" placeholder="Cantidad de billetes de 10$"></input>
+      <input type="text" id="mainForm_inicialVeinte" placeholder="Cantidad de billetes de 20$"></input>
+      <input type="text" id="mainForm_inicialCincuenta" placeholder="Cantidad de billetes de 50$"></input>
       <button id="mainForm_btAceptar">Aceptar</button>
       
       <table id="mainForm_tabla">
         <tr>
-          <th>Cedula</th>
+          <th>Cédula</th>
           <th>Denominación</th>
           <th>Cantidad</th>
-          <th>Monto Cuenta</th>
+          <th>Monto de Cuenta</th>
         </tr>
       </table>
       <h5>Monto al final de billetes de 10$: <span id="mainForm_lblMontoDiez">?</span>$</h5>
       <h5>Monto al final de billetes de 20$: <span id="mainForm_lblMontoVeinte">?</span>$</h5>
       <h5>Monto al final de billetes de 50$: <span id="mainForm_lblMontoCincuenta">?</span>$</h5>
-      <h5>Al bodeguero tiene un monto total de: <span id="mainForm_lblMontoTotal">?</span>$</h5>
+      <h5>Al bodeguero tiene un Monto Total de: <span id="mainForm_lblMontoTotal">?</span>$</h5>
 
       <h5>El Bodeguero obtuvo en la Jornada un monto de: <span id="mainForm_lblMontoJornada">?</span>$</h5>
-
-      <h5>El Porcentaje de aumento de la Cantidad de Billetes de 50$ es: <span id="mainForm_">?</span>%</h5>
-
+      <h5>El Porcentaje de aumento de la Cantidad de Billetes de 50$ es: <span id="mainForm_lblPorcentajeCantidadCincuenta".tofixed (3)>?</span>%</h5>
+      <h5>El Porcentaje de aumento de la Cantidad de Billetes de 20$ es: <span id="mainForm_lblPorcentajeMontoVeinte".tofixed (3)>?</span>%</h5>
       <button id="mainForm_btAgregar">Agregar cliente</button>
     </section>
 
     <section id="clienteForm">
       <h3>Datos del cliente</h3>
+      <h5>Introduzca la denominacion del billete, 10$, 20$ o 50$ y la cantidad</h5>
       <input type="text" id="clienteForm_inCedula" placeholder="Cedula"></input>
-      <input type="text" id="clienteForm_inDenominacion" placeholder="Denominación"></input>
-      <input type="text" id="clienteForm_inCantidad"  placeholder="Cantidad"></input>
+      <input type="text" id="clienteForm_inDenominacion" placeholder="Denominación del Billete"></input>
+      <input type="text" id="clienteForm_inCantidad"  placeholder="Cantidad de Billetes"></input>
       <button id="clienteForm_btAceptar">Aceptar</button> 
     </section>
   </body>

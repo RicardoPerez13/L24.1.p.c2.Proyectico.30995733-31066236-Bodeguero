@@ -41,6 +41,8 @@ export default class CL_controlador {
           montoCincuenta: this.mBodeguero.montoCincuenta(),
           montoTotal: this.mBodeguero.montoTotal(),
           montoJornada: this.mBodeguero.montoJornada(),
+          porcentajeCantidadCincuenta: this.mBodeguero.porcentajeCantidadCincuenta().toFixed(2),
+          porcentajeMontoVeinte: this.mBodeguero.porcentajeMontoVeinte().toFixed(2),
         });
         this.mostrarVistaBodeguero();
       }

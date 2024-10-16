@@ -10,51 +10,49 @@ export default class Cl_mBodeguero {
         this._inicialDiez=0;
         this._inicialVeinte=0;
         this._inicialCincuenta=0
-        }
+        };
         
     set inicialDiez(inicialDiez) {
         this._inicialDiez = +inicialDiez;
-        }
+        };
     get inicialDiez() {
         return this._inicialDiez;
-        }
+        };
     set inicialVeinte(inicialVeinte) {
         this._inicialVeinte = +inicialVeinte;
-        }
+        };
     get inicialVeinte() {
         return this._inicialVeinte;
-        }
+        };
     set inicialCincuenta(inicialCincuenta) {
         this._inicialCincuenta = +inicialCincuenta;
-        }
+        };
     get inicialCincuenta() {
         return this._inicialCincuenta;
-        }
+        };
 
-    procesarCliente (cliente){
-        if (cliente.denominacion === 10){
-            this.acumDiez += cliente.cantidad;
+procesarCliente (cliente){
+    if (cliente.denominacion === 10){
+        this.acumDiez += cliente.cantidad;
         }
-        else if (cliente.denominacion === 20){
-            this.acumVeinte += cliente.cantidad;
+    else if (cliente.denominacion === 20){
+        this.acumVeinte += cliente.cantidad;
         }
-        else if (cliente.denominacion === 50){
-            this.acumCincuenta += cliente.cantidad;
+    else if (cliente.denominacion === 50){
+        this.acumCincuenta += cliente.cantidad;
         }
-        else return 0;
+    else return 0;
     }
 
     cantidadCincuenta (){
-            return (this.acumCincuenta + this.inicialCincuenta);
+        return (this.acumCincuenta + this.inicialCincuenta);
     }
     cantidadVeinte (){
-            return (this.acumVeinte + this.inicialVeinte);
+        return (this.acumVeinte + this.inicialVeinte);
     }
     cantidadDiez (){
-            return (this.acumDiez + this.inicialDiez);
+        return (this.acumDiez + this.inicialDiez);
     }
-
-
     montoDiez (){
             return this.cantidadDiez() * 10;
         }
@@ -66,18 +64,17 @@ export default class Cl_mBodeguero {
         }
     montoTotal (){
             return this.montoDiez() + this.montoVeinte() + this.montoCincuenta();
-        }; 
-
+        }
         
-
     montoJornada (){
             return (this.acumDiez) * 10 + (this.acumVeinte) * 20 + (this.acumCincuenta) * 50;
         }
-    
-
     porcentajeCantidadCincuenta (){
-            return (this.cantidadCincuenta()-this.inicialCincuenta) / this.cantidadCincuenta() * 100;
-    } 
+            return (this.cantidadCincuenta()-this.inicialCincuenta) / this.inicialCincuenta * 100;
+        }
+    porcentajeMontoVeinte (){
+            return (this.cantidadVeinte()*20-this.inicialVeinte*20) / (this.inicialVeinte*20)*100;
+        }
   
 }
     
