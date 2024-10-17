@@ -44,15 +44,17 @@ procesarCliente (cliente){
     else return 0;
     }
 
-    cantidadCincuenta (){
-        return (this.acumCincuenta + this.inicialCincuenta);
+    
+    cantidadDiez (){
+        return (this.acumDiez + this.inicialDiez);
     }
     cantidadVeinte (){
         return (this.acumVeinte + this.inicialVeinte);
     }
-    cantidadDiez (){
-        return (this.acumDiez + this.inicialDiez);
+    cantidadCincuenta (){
+        return (this.acumCincuenta + this.inicialCincuenta);
     }
+    
     montoDiez (){
             return this.cantidadDiez() * 10;
         }
@@ -65,17 +67,7 @@ procesarCliente (cliente){
     montoTotal (){
             return this.montoDiez() + this.montoVeinte() + this.montoCincuenta();
         }
-        
-    montoJornada (){
-            return (this.acumDiez) * 10 + (this.acumVeinte) * 20 + (this.acumCincuenta) * 50;
-        }
-    porcentajeCantidadCincuenta (){
-            return (this.cantidadCincuenta()-this.inicialCincuenta) / this.inicialCincuenta * 100;
-        }
-    porcentajeMontoVeinte (){
-            return (this.cantidadVeinte()*20-this.inicialVeinte*20) / (this.inicialVeinte*20)*100;
-        }
-  
+
 }
     
 

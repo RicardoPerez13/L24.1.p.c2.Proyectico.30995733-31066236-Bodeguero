@@ -4,23 +4,23 @@ export default class Cl_mCliente {
     this.denominacion = denominacion;
     this.cantidad = cantidad;
   }
-  set cedula(c) {
-    this._cedula = +c;
+    set cedula(c) {
+      this._cedula = +c;
   }
-  get cedula() {
-    return this._cedula;
+    get cedula() {
+      return this._cedula;
   }
-  set denominacion(d) {
-    this._denominacion = +d;
+    set denominacion(d) {
+      this._denominacion = +d;
   }
-  get denominacion() {
-    return this._denominacion;
+    get denominacion() {
+      return this._denominacion;
   }
-  set cantidad(ca) {
-    this._cantidad = +ca;
+    set cantidad(ca) {
+      this._cantidad = +ca;
   }
-  get cantidad() {
-    return this._cantidad;
+    get cantidad() {
+      return this._cantidad;
   }
   montoCuenta() {
     return this.denominacion * this.cantidad;

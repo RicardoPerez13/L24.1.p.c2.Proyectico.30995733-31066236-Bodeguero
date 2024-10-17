@@ -33,16 +33,14 @@ export default class CL_controlador {
         this.mBodeguero.procesarCliente(cliente);
         this.vBodeguero.reportarCliente({
           cedula: cliente.cedula,
-          denominacion: cliente.denominacion,
+          denominacion: "$"+cliente.denominacion,
           cantidad: cliente.cantidad,
-          montoCuenta: cliente.montoCuenta(),
-          montoDiez: this.mBodeguero.montoDiez(),
-          montoVeinte: this.mBodeguero.montoVeinte(),
-          montoCincuenta: this.mBodeguero.montoCincuenta(),
-          montoTotal: this.mBodeguero.montoTotal(),
-          montoJornada: this.mBodeguero.montoJornada(),
-          porcentajeCantidadCincuenta: this.mBodeguero.porcentajeCantidadCincuenta().toFixed(2),
-          porcentajeMontoVeinte: this.mBodeguero.porcentajeMontoVeinte().toFixed(2),
+          montoCuenta: "$"+cliente.montoCuenta().toFixed(2),
+          montoDiez: this.mBodeguero.montoDiez().toFixed(2),
+          montoVeinte: this.mBodeguero.montoVeinte().toFixed(2),
+          montoCincuenta: this.mBodeguero.montoCincuenta().toFixed(2),
+          montoTotal: this.mBodeguero.montoTotal().toFixed(2),
+
         });
         this.mostrarVistaBodeguero();
       }

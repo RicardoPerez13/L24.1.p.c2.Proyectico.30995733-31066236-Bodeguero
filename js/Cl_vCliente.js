@@ -14,10 +14,10 @@ export default class CL_vCliente {
         });
       this.ocultar();
     }
-    mostrar() {
+  mostrar() {
       this.vista.hidden = false;
     }
-    ocultar() {
+  ocultar() {
       this.vista.hidden = true;
     }
   }
